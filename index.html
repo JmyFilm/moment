@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Moment</title>
+    <meta name="author" content="JmyFilm" />
+    <meta name="description" content="JmyFilm Moment" />
+    <link rel="preload" href="moon_dance.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="mmt.jpg" />
+    <meta property="og:title" content="Moment" />
+    <meta property="og:image" content="mmt.jpg" />
+    <meta property="og:description" content="JmyFilm Moment" />
+    <style>
+        @font-face {
+            font-family: 'Moon Dance';
+            src: url('moon_dance.ttf') format('truetype');
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: white;
+            background-color: #161616;
+        }
+
+        body>header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mmt {
+            display: flex;
+            justify-content: center;
+            user-select: none;
+            font-family: "Moon Dance";
+            font-size: 4rem;
+            color: #ffdf00;
+        }
+
+        .mmt:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            height: 5rem;
+            width: 5rem;
+            background-image: -webkit-linear-gradient(#cc00ff, #00bbff);
+            filter: blur(2rem);
+            border-radius: 50%;
+            animation: mmtRay 7s linear infinite;
+        }
+
+        @keyframes mmtRay {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="mmt">Moment</p>
+    </header>
+    <main>
+        <section></section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
+
+
+<!-- moment@JmyFilm.com -->
