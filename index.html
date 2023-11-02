@@ -8,7 +8,7 @@
     <title>Moment</title>
     <meta name="author" content="JmyFilm" />
     <meta name="description" content="JmyFilm Moment" />
-    <link rel="preload" href="moon_dance.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <!-- <link rel="preload" href="moon_dance.ttf" as="font" type="font/ttf" crossorigin="anonymous"> -->
     <link rel="icon" href="favicon.ico" />
     <link rel="apple-touch-icon" href="mmt.jpg" />
     <meta property="og:title" content="Moment" />
@@ -63,10 +63,19 @@
         @keyframes mmtRay {
             0% {
                 transform: rotate(0deg);
+                height: 4rem;
+                width: 4rem;
+            }
+
+            50% {
+                height: 6rem;
+                width: 6rem;
             }
 
             100% {
                 transform: rotate(360deg);
+                height: 4rem;
+                width: 4rem;
             }
         }
     </style>
@@ -74,13 +83,23 @@
 
 <body>
     <header>
-        <p class="mmt">Moment</p>
+        <noscript>JavaScript is Disabled.</noscript>
+        <p class="mmt" style="display: none;">Moment</p>
     </header>
     <main>
         <section></section>
     </main>
     <footer></footer>
 </body>
+
+<script>
+    const _mmt = document.getElementsByClassName("mmt")[0]
+    if (window.FontFace) {
+        new FontFace('Moon Dance', 'url(moon_dance.ttf)').load().then(() => _mmt.style.display = "flex")
+    } else {
+        _mmt.style.display = "flex"
+    }
+</script>
 
 </html>
 
